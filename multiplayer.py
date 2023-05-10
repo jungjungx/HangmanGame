@@ -195,6 +195,7 @@ def multi(gomain):
 
                 userlist,open_lobbies = get_full_list(full_list)
                 active_users= get_userlist(userlist)
+                #print(f"list of active users: {active_users}")
                 oplobbies = get_userlist(open_lobbies)
 
                 #visuals

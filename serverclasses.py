@@ -36,7 +36,7 @@ class client_list(object):
         return userlist
 
 class lobby(object):
-    def __init__(self,lobbyname=None, maxplayers=None, is_public=None, password=None,owner=None, players=None, gamestate=None):
+    def __init__(self,lobbyname=None, maxplayers=None, is_public=None, password=None,owner=None, players=None, gamestate=None, gameword=None,winningtime=None, winner=None):
         self.lobbyname = lobbyname
         self.maxplayers= maxplayers
         self.is_public = is_public
@@ -44,6 +44,9 @@ class lobby(object):
         self.owner = owner
         self.players = players
         self.gamestate = gamestate
+        self.gameword = gameword
+        self.winningtime = winningtime
+        self.winner =winner
     
     def add_client(self,client):
         self.players.add(client)
