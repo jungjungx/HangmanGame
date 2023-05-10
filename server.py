@@ -111,6 +111,7 @@ def handle_client(client_list,client):
             if lobbylist == '':
                 lobbylist = 'null'
             full_list = userlist + ':' + lobbylist
+            #print(full_list)
             client.clientsocket.send(full_list.encode('utf-8'))
             #client.clientsocket.send(lobbylist.encode('utf-8'))
             #print(lobbylist)
@@ -161,7 +162,7 @@ def handle_lobby(lobby_list,lobby,client,client_list,lobbydata):
                 break
 
             elif data == b'start':
-                if len(lobby.players) > 0: #CHANGE IN FINAL VERSION TO 1
+                if len(lobby.players) > 1: #CHANGE IN FINAL VERSION TO 1
                     lobby.gameword = chosen_word()
                     lobby.gamestate = 1
                     print(f"the game word will be: {lobby.gameword}")
